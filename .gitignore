@@ -1,0 +1,13 @@
+# backup files
+*~
+.*~
+
+# build files
+*.o
+*.out
+
+# log files
+*.txt
+
+# main.c
+main.c
