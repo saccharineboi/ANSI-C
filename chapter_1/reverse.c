@@ -21,6 +21,7 @@ void reverse(char line[], int len)
                 tmp = line[i], line[i] = line[j], line[j] = tmp;
 }
 
+// ex 1-19
 int main()
 {
         int len;

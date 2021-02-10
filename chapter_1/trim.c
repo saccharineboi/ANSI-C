@@ -27,6 +27,7 @@ void trim(char line[], int len)
         }
 }
 
+// ex 1-18
 int main()
 {
         int len;
