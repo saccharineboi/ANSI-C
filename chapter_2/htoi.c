@@ -15,7 +15,7 @@ int htoi(const char s[])
         for (; s[i]; ++i) {
               if (isdigit(s[i]))
                       n = 16 * n + (s[i] - '0');
-              else if (isalpha(s[i]))
+              else if ((s[i] >= 'a' && s[i] <= 'f') || (s[i] >= 'A' && s[i] <= 'F'))
                       n = 16 * n + (s[i] - (isupper(s[i]) ? 'A' : 'a')) + 10;
               else
                       return n;
@@ -26,7 +26,7 @@ int htoi(const char s[])
 // ex 2-3
 int main()
 {
-        printf("%d\n", htoi("0xa0"));
+        printf("%d\n", htoi("0xff"));
 
         return 0;
 }
