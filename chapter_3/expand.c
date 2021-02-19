@@ -15,21 +15,19 @@ void expand(char s1[], char s2[])
                 cp = s1[i];
         if (s1[i] == '-')
                 cn = s1[++i];
-        if (isdigit(cp) && isdigit(cn)) {
+        if ((isdigit(cp) && isdigit(cn)) || (isupper(cp) && isupper(cn)) || (islower(cp) && islower(cn)))
                 for (j = cp; j <= cn; ++j, ++k)
                         s2[k] = j;
-        }
-        else if ((isupper(cp) && isupper(cn)) || (islower(cp) && islower(cn))) {
-                for (j = cp; j <= cn; ++j, ++k)
-                        s2[k] = j;
-        }
-        s2[k] = 0;
+        if (s1[i + 1])
+                expand(s1 + i + 1, s2 + k);
+        else
+                s2[k] = 0;
 }
 
-// ex 3-3 (incomplete!!)
+// ex 3-3 (eh, good enough?)
 int main()
 {
-        char pattern[] = "2-9";
+        char pattern[] = "a-z0-9";
         char result[100];
 
         expand(pattern, result);
