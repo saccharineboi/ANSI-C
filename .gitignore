@@ -1,6 +1,7 @@
 # backup files
 *~
 .*~
+*.swp
 
 # build files
 *.o
