@@ -22,7 +22,7 @@ void itoa_recursive(char s[], int n)
 int main()
 {
         char test[20];
-        
+
         itoa_recursive(test, 0);
         printf("%s\n", test);
 
